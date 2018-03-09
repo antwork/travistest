@@ -3,7 +3,7 @@ node_js: stable
 before_install:
 - openssl aes-256-cbc -K $encrypted_43030370c02a_key -iv $encrypted_43030370c02a_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~./.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
 addons:
   ssh_known_hosts: 118.24.152.130
 after_success:
