@@ -6,5 +6,13 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 addons:
   ssh_known_hosts: 118.24.152.130
+script:
+  - echo "hello world"
 after_success:
-  - ssh root@118.24.152.130 "./run"
+  - ssh root@118.24.152.130
+  - cd /home/www/blog # 打开git文件夹
+  - git config user.name "antwork" # 修改name
+  - git config user.email "antwork@126.com" # 修改email
+  - git fetch --all  
+  - git reset --hard origin/master 
+  - git pull
