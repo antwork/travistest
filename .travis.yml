@@ -9,10 +9,4 @@ addons:
 script:
   - echo "hello world"
 after_success:
-  - ssh root@118.24.152.130
-  - cd /home/www/blog # 打开git文件夹
-  - git config user.name "antwork" # 修改name
-  - git config user.email "antwork@126.com" # 修改email
-  - git fetch --all  
-  - git reset --hard origin/master 
-  - git pull
+  - ssh root@118.24.152.130 "./run"

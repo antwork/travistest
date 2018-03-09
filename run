@@ -1,2 +1,9 @@
 #!/bin/bash
-echo 'hello world'
+echo "run begin"
+cd /home/www/blog # 打开git文件夹
+git config user.name "antwork" # 修改name
+git config user.email "antwork@126.com" # 修改email
+git fetch --all  
+git reset --hard origin/master 
+git pull
+echo "run end"
