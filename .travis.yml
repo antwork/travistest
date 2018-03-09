@@ -5,8 +5,8 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 addons:
-  ssh_known_hosts: 118.24.152.130
+  ssh_known_hosts: ${CLOUD_IP}
 script:
   - echo "hello world"
 after_success:
-  - ssh root@118.24.152.130 "./run"
+  - ssh root@${CLOUD_IP} "./pullblog"
